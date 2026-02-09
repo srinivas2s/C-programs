@@ -331,3 +331,37 @@ int main() {
 
     return 0;
 }
+
+/* Program Name: Calculate average and grade of 3 subjects using else-if */
+
+#include <stdio.h>
+
+int main() {
+    int m, p, c;
+    float avg;
+
+    printf("Enter marks of Maths, Physics and Computer: ");
+    scanf("%d %d %d", &m, &p, &c);
+
+    /* Check pass or fail (>=40 in each subject) */
+    if (m >= 40 && p >= 40 && c >= 40) {
+
+        avg = (m + p + c) / 3.0;
+        printf("Average = %.2f\n", avg);
+
+        /* Determine grade */
+        if (avg >= 75)
+            printf("Grade = A");
+        else if (avg >= 60)
+            printf("Grade = B");
+        else if (avg >= 50)
+            printf("Grade = C");
+        else
+            printf("Grade = D");
+    }
+    else {
+        printf("Result = Fail");
+    }
+
+    return 0;
+}
